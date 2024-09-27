@@ -1,0 +1,53 @@
+Summary statistics of processed data:
+     Height             Weight             Age          Grip_strength    
+ Min.   :-1.67598   Min.   :-1.3983   Min.   :-1.2053   Min.   :-1.5481  
+ 1st Qu.:-0.46389   1st Qu.:-0.7835   1st Qu.:-0.7970   1st Qu.:-0.7741  
+ Median :-0.08978   Median : 0.2881   Median :-0.2333   Median : 0.2212  
+ Mean   : 0.00000   Mean   : 0.0000   Mean   : 0.0000   Mean   : 0.0000  
+ 3rd Qu.: 0.65842   3rd Qu.: 0.6921   3rd Qu.: 0.8553   3rd Qu.: 0.8294  
+ Max.   : 1.73584   Max.   : 1.4826   Max.   : 1.4385   Max.   : 1.1058  
+    Frailty   
+ Min.   :0.0  
+ 1st Qu.:0.0  
+ Median :0.0  
+ Mean   :0.4  
+ 3rd Qu.:1.0  
+ Max.   :1.0  
+
+Correlation between Grip_strength and Frailty: -0.48 
+
+Mean grip strength for frail participants: -0.55 kg
+Mean grip strength for non-frail participants: 0.37 kg
+
+t-test results comparing grip strength between frail and non-frail groups:
+
+	Welch Two Sample t-test
+
+data:  Grip_strength by Frailty
+t = 1.635, df = 7.8169, p-value = 0.1416
+alternative hypothesis: true difference in means between group 0 and group 1 is not equal to 0
+95 percent confidence interval:
+ -0.3835081  2.2265325
+sample estimates:
+mean in group 0 mean in group 1 
+      0.3686049      -0.5529073 
+
+
+Model Evaluation Results:
+Accuracy: 0.5 
+
+Confusion Matrix:
+          Reference
+Prediction 0 1
+         0 1 1
+         1 0 0
+
+Classification Report:
+         Sensitivity          Specificity       Pos Pred Value 
+           1.0000000            0.0000000            0.5000000 
+      Neg Pred Value            Precision               Recall 
+                 NaN            0.5000000            1.0000000 
+                  F1           Prevalence       Detection Rate 
+           0.6666667            0.5000000            0.5000000 
+Detection Prevalence    Balanced Accuracy 
+           1.0000000            0.5000000 
